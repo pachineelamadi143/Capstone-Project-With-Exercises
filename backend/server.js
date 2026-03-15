@@ -17,7 +17,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: '*',
   credentials: true
 }));
 app.use(express.json());
@@ -47,5 +47,5 @@ initWebSocket(wss);
 
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
-  console.log(`WebSocket server is ready on ws://localhost:${PORT}`);
+  console.log(`WebSocket server is ready`);;
 });
