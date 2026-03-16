@@ -7,7 +7,7 @@ The platform allows customers to browse pizzas, place orders, and track their or
 🚀 **Live Application:**  
 https://pizza-store-156c4.web.app
 
-📌 Project Overview
+# 📌 Project Overview
 
 The Pizza Store Application provides an online platform where users can easily explore different pizza categories and place orders.
 
@@ -37,7 +37,7 @@ View revenue information
 
 This project demonstrates full-stack development using modern web technologies.
 
-🚀 Features
+# 🚀 Features
 Customer Features
 
 User Registration and Login
@@ -64,7 +64,7 @@ Send order status notifications
 
 Monitor shop revenue
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 Frontend
 
 React.js
@@ -97,7 +97,7 @@ Unit Testing
 
 Cypress (End-to-End Testing)
 
-⚙️ Installation
+# ⚙️ Installation
 1️⃣ Clone the repository
 git clone https://github.com/your-username/pizza-store.git
 2️⃣ Install backend dependencies
@@ -110,7 +110,8 @@ npm install
 npm start
 5️⃣ Run the frontend
 npm start
-🌐 Application Architecture
+
+# 🌐 Application Architecture
 React Frontend
       ↓
 Node.js + Express API
@@ -123,7 +124,7 @@ Express provides REST APIs.
 
 MongoDB stores application data.
 
-🧪 Testing
+# 🧪 Testing
 
 The project includes:
 
