@@ -1,9 +1,6 @@
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { sendOtpEmail } = require('./mailService');
-
-const OTP_EXPIRY_MS = 10 * 60 * 1000;
 
 const serializeUser = (user) => ({
   id: user._id,
@@ -19,21 +16,6 @@ const generateToken = (user) => jwt.sign(
   { expiresIn: '7d' }
 );
 
-const generateOtp = () => `${Math.floor(100000 + Math.random() * 900000)}`;
-
-const assignOtp = async (user, purpose) => {
-  const otp = generateOtp();
-  user.otpCode = otp;
-  user.otpPurpose = purpose;
-  user.otpExpiresAt = new Date(Date.now() + OTP_EXPIRY_MS);
-  await user.save();
-
-  // Send email in background — do NOT await so the response is immediate
-  console.log(`[OTP] ${purpose} OTP for ${user.email}: ${otp}`);
-  sendOtpEmail({ to: user.email, otp, purpose, name: user.name })
-    .then(() => console.log(`[MAIL] OTP email sent to ${user.email}`))
-    .catch((err) => console.error(`[MAIL] Failed to send OTP email to ${user.email}:`, err.message));
-};
 
 const registerUser = async (userData) => {
   const { name, email, password, phone } = userData;
@@ -52,9 +34,6 @@ const registerUser = async (userData) => {
     existingUser.phone = phone;
     existingUser.role = 'customer';
     existingUser.isVerified = true;
-    existingUser.otpCode = '';
-    existingUser.otpPurpose = '';
-    existingUser.otpExpiresAt = null;
     await existingUser.save();
   } else {
     await User.create({
@@ -85,59 +64,10 @@ const loginUser = async (email, password) => {
     throw new Error('Please verify your email before logging in');
   }
 
-  await assignOtp(user, 'login');
-
-  return {
-    requiresOtp: true,
-    email: user.email
-  };
-};
-
-const verifyRegisterOtp = async (email, otp) => {
-  const user = await User.findOne({ email });
-  if (!user || user.otpPurpose !== 'register') {
-    throw new Error('Invalid OTP request');
-  }
-  if (!user.otpExpiresAt || user.otpExpiresAt.getTime() < Date.now()) {
-    throw new Error('OTP has expired');
-  }
-  if (user.otpCode !== otp) {
-    throw new Error('Invalid OTP');
-  }
-
-  user.isVerified = true;
-  user.otpCode = '';
-  user.otpPurpose = '';
-  user.otpExpiresAt = null;
-  await user.save();
-
   return {
     token: generateToken(user),
     user: serializeUser(user)
   };
 };
 
-const verifyLoginOtp = async (email, otp) => {
-  const user = await User.findOne({ email });
-  if (!user || user.otpPurpose !== 'login') {
-    throw new Error('Invalid OTP request');
-  }
-  if (!user.otpExpiresAt || user.otpExpiresAt.getTime() < Date.now()) {
-    throw new Error('OTP has expired');
-  }
-  if (user.otpCode !== otp) {
-    throw new Error('Invalid OTP');
-  }
-
-  user.otpCode = '';
-  user.otpPurpose = '';
-  user.otpExpiresAt = null;
-  await user.save();
-
-  return {
-    token: generateToken(user),
-    user: serializeUser(user)
-  };
-};
-
-module.exports = { registerUser, loginUser, verifyRegisterOtp, verifyLoginOtp };
+module.exports = { registerUser, loginUser };
