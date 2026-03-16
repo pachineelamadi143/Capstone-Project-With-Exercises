@@ -93,29 +93,6 @@ Unit Testing
 
 Cypress (End-to-End Testing)
 
-📂 Project Structure
-PizzaStore
-│
-├── backend
-│   ├── config
-│   ├── controllers
-│   ├── middleware
-│   ├── models
-│   ├── routes
-│   ├── services
-│   └── server.js
-│
-├── frontend
-│   ├── public
-│   └── src
-│       ├── components
-│       ├── pages
-│       ├── services
-│       ├── context
-│       ├── routes
-│       └── App.js
-│
-└── README.md
 ⚙️ Installation
 1️⃣ Clone the repository
 git clone https://github.com/your-username/pizza-store.git
