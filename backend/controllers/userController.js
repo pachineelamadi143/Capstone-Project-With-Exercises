@@ -18,12 +18,12 @@ exports.getProfile = async (req, res) => {
 // Update user profile
 exports.updateProfile = async (req, res) => {
   try {
-    const { name, phone } = req.body;
+    const { name, phone, profileImage } = req.body;
     
     // Find user by ID and update the allowed fields
     const updatedUser = await User.findByIdAndUpdate(
       req.user.id,
-      { $set: { name, phone } },
+      { $set: { name, phone, profileImage: profileImage || '' } },
       { new: true, runValidators: true }
     ).select('-password');
     

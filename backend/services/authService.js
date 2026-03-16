@@ -37,7 +37,8 @@ const registerUser = async (userData) => {
       id: user._id,
       name: user.name,
       email: user.email,
-      role: user.role
+      role: user.role,
+      profileImage: user.profileImage || ''
     }
   };
 };
@@ -68,7 +69,8 @@ const loginUser = async (email, password) => {
       id: user._id,
       name: user.name,
       email: user.email,
-      role: user.role
+      role: user.role,
+      profileImage: user.profileImage || ''
     }
   };
 };
