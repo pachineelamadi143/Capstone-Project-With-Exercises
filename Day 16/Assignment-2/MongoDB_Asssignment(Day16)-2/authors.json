@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "69a2d3d1f6f41d7f577c2907",
+    "name": "J.K. Rowling",
+    "nationality": "British",
+    "birthYear": 1965
+  },
+  {
+    "_id": "69a2d3d1f6f41d7f577c2908",
+    "name": "George Orwell",
+    "nationality": "British",
+    "birthYear": 1903
+  },
+  {
+    "_id": "69a2d3d1f6f41d7f577c2909",
+    "name": "Isaac Asimov",
+    "nationality": "American",
+    "birthYear": 1920
+  },
+  {
+    "_id": "69a2d3d1f6f41d7f577c290a",
+    "name": "J.R.R. Tolkien",
+    "nationality": "British",
+    "birthYear": 1892
+  }
+]

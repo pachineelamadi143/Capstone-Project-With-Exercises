@@ -1,0 +1,376 @@
+/* App.css - Main Application Styling */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Header Styles */
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-title {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.app-subtitle {
+  margin: 0;
+  font-size: 18px;
+  opacity: 0.95;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+/* Main Content */
+.app-main {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Architecture Overview Section */
+.architecture-overview {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.architecture-overview h2 {
+  margin: 0 0 30px 0;
+  color: #333;
+  font-size: 28px;
+  text-align: center;
+}
+
+.architecture-diagram {
+  background: #f8f9ff;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  overflow-x: auto;
+}
+
+.flow-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flow-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.flow-circle {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.flow-label {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  width: 80px;
+  line-height: 1.3;
+}
+
+.flow-arrow {
+  color: #667eea;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Key Concepts */
+.key-concepts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.concept-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.concept-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(245, 87, 108, 0.2);
+}
+
+.concept-card h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.concept-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* Form Section */
+.form-section {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* List Section */
+.list-section {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Tech Stack Section */
+.tech-stack {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tech-stack h2 {
+  margin: 0 0 30px 0;
+  color: #333;
+  font-size: 28px;
+  text-align: center;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.tech-item {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.tech-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.tech-item strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.tech-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* Footer */
+.app-footer {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: auto;
+  font-size: 14px;
+}
+
+.app-footer p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 36px;
+  }
+
+  .app-subtitle {
+    font-size: 16px;
+  }
+
+  .container {
+    gap: 30px;
+  }
+
+  .architecture-overview,
+  .form-section,
+  .list-section,
+  .tech-stack {
+    padding: 25px;
+  }
+
+  .flow-box {
+    gap: 10px;
+  }
+
+  .flow-arrow {
+    font-size: 20px;
+  }
+
+  .concept-card {
+    padding: 15px;
+  }
+
+  .tech-item {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 30px 15px;
+  }
+
+  .app-title {
+    font-size: 28px;
+  }
+
+  .app-subtitle {
+    font-size: 14px;
+  }
+
+  .app-main {
+    padding: 20px 10px;
+  }
+
+  .architecture-overview,
+  .form-section,
+  .list-section,
+  .tech-stack {
+    padding: 15px;
+  }
+
+  .flow-box {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+    margin: 5px 0;
+  }
+
+  .architecture-overview h2,
+  .tech-stack h2 {
+    font-size: 22px;
+  }
+
+  .concept-card h4 {
+    font-size: 14px;
+  }
+
+  .concept-card p,
+  .tech-item p {
+    font-size: 12px;
+  }
+
+  .app-footer p {
+    font-size: 12px;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* SPA Transitions */
+section {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}

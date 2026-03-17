@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Chat</title>
+  <style>
+    body { font-family: Arial; max-width: 500px; margin: 40px auto; }
+    #messages { list-style: none; padding: 0; border: 1px solid #ccc;
+                height: 300px; overflow-y: scroll; margin-bottom: 10px; }
+    #messages li { padding: 8px 12px; border-bottom: 1px solid #eee; }
+    input { width: 75%; padding: 8px; }
+    button { padding: 8px 16px; background: #007bff; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h2>💬 Live Chat</h2>
+  <ul id="messages"></ul>
+
+  <input id="msgInput" type="text" placeholder="Type a message..." autocomplete="off"/>
+  <button onclick="sendMessage()">Send</button>
+
+  <!-- Socket.io client (auto-served by socket.io) -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();   // connect to server
+
+    // Receive message from server and display it
+    socket.on('chat message', (msg) => {
+      const li = document.createElement('li');
+      li.textContent = msg;
+      document.getElementById('messages').appendChild(li);
+    });
+
+    function sendMessage() {
+      const input = document.getElementById('msgInput');
+      if (input.value.trim()) {
+        socket.emit('chat message', input.value);  // send to server
+        input.value = '';
+      }
+    }
+
+    // Send on Enter key
+    document.getElementById('msgInput').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+  </script>
+
+</body>
+</html>

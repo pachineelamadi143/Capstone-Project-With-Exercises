@@ -1,0 +1,59 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "React Design Patterns",
+      "author": "Michael Chan",
+      "description": "Learn advanced React patterns including Hooks, Render Props, and HOC patterns for building scalable applications.",
+      "pages": 328,
+      "year": 2024,
+      "rating": 4.8,
+      "price": 45.99,
+      "category": "Technology"
+    },
+    {
+      "id": 2,
+      "title": "The Art of JavaScript",
+      "author": "Sarah Wilson",
+      "description": "Explore the foundations and advanced concepts of JavaScript, including ES6+, async/await, and functional programming.",
+      "pages": 412,
+      "year": 2023,
+      "rating": 4.6,
+      "price": 52.99,
+      "category": "Programming"
+    },
+    {
+      "id": 3,
+      "title": "Web Development Mastery",
+      "author": "John Smith",
+      "description": "Complete guide to modern web development covering HTML5, CSS3, JavaScript, and popular frameworks.",
+      "pages": 456,
+      "year": 2024,
+      "rating": 4.7,
+      "price": 59.99,
+      "category": "Web Development"
+    },
+    {
+      "id": 4,
+      "title": "Node.js Backend Development",
+      "author": "Emma Johnson",
+      "description": "Build scalable backend applications using Node.js, Express, and best practices for API development.",
+      "pages": 380,
+      "year": 2023,
+      "rating": 4.5,
+      "price": 48.99,
+      "category": "Backend"
+    },
+    {
+      "id": 5,
+      "title": "Full Stack Development Guide",
+      "author": "Robert Davis",
+      "description": "Learn to build complete web applications with modern frontend and backend technologies.",
+      "pages": 520,
+      "year": 2024,
+      "rating": 4.9,
+      "price": 65.99,
+      "category": "Full Stack"
+    }
+  ]
+}

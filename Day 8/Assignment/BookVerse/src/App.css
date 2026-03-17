@@ -1,0 +1,171 @@
+.App {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: lightcyan; /* lighter, cool-tinted background */
+  color: #222;
+  min-height: 100vh;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 24px 12px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- BookVerse specific styles --- */
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.6px;
+}
+
+.app-header .subtitle {
+  margin: 4px 0 12px;
+  color: #5a5a5a;
+  font-size: 0.95rem;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center; /* center children horizontally */
+  width: 100%;
+  max-width: 980px; /* align with main content */
+  margin: 8px auto; /* center the whole controls block */
+}
+
+.view-toggle button {
+  border: none;
+  background: transparent;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #555555;
+  font-weight: 600;
+}
+
+.view-toggle button.active {
+  background: #61dafb;
+  color: #03202f;
+  box-shadow: 0 4px 10px rgba(97,218,251,0.2);
+}
+
+.view-toggle button:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.search input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(2,6,23,0.08);
+  min-width: 220px;
+  outline: none;
+}
+
+main {
+  max-width: 980px;
+  margin: 18px auto 48px;
+  padding: 0 16px;
+}
+
+.book-list.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.book-list.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.book-card {
+  background: #ffffff;
+  color: #1b2430;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+}
+
+.book-card .book-info {
+  text-align: left;
+}
+
+.book-title {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+}
+
+.book-author {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.book-price {
+  font-weight: 700;
+  color: #0b8457;
+  margin-left: 12px;
+  min-width: 72px;
+  text-align: right;
+}
+
+.book-list.list .book-card {
+  align-items: flex-start;
+}
+
+.empty {
+  padding: 28px;
+  border-radius: 8px;
+  text-align: center;
+  color: #94a3b8;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  border: 1px dashed rgba(2,6,23,0.03);
+}
+
+@media (max-width: 520px) {
+  .search input { min-width: 140px; }
+  .book-price { min-width: 56px; font-size: 0.95rem; }
+}

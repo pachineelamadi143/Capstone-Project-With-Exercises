@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: pink;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+  background-color: lightblue;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+nav img {
+  height: 50px;
+}
+
+.navbar-nav {
+  gap: 20px;
+  padding: 10px;
+}
+
+.navbar .nav-link {
+  background-color: white;
+  border-radius: 20px;
+  padding: 6px 18px;
+  color: black;
+  transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+  }
+
+  #mainMenu {
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    background-color: lightblue;
+    border-radius: 18px;
+    padding: 12px;
+    width: 180px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  #mainMenu .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #mainMenu .nav-link {
+    text-align: center;
+  }
+}
+.main-box {
+  background: white;
+  border-radius: 20px;
+  min-height: 70vh;
+  padding: 30px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #fffbdc;
+  min-width: 900px;
+}
+
+table td {
+  border: 2px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+}
+
+table tr:first-child td {
+  font-weight: bold;
+}
+
+table td[rowspan] {
+  background-color: #fff3a0;
+  font-weight: bold;
+}
+#slogan {
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: lightcyan;
+  border-radius: 20px;
+  width: fit-content;
+  font-style: italic;
+}

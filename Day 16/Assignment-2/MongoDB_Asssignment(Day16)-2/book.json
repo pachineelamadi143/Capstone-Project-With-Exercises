@@ -1,0 +1,106 @@
+[
+    {
+        "_id": "69a2d3faf6f41d7f577c290b",
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "genre": "Fantasy",
+        "publicationYear": 1997,
+        "authorId": "69a2d3d1f6f41d7f577c2907",
+        "ratings": [
+            {
+                "user": "alice",
+                "score": 5,
+                "comment": "Amazing book!"
+            },
+            {
+                "user": "bob",
+                "score": 4,
+                "comment": "Really enjoyed it"
+            }
+        ]
+    },
+    {
+        "_id": "69a2d3faf6f41d7f577c290c",
+        "title": "1984",
+        "genre": "Science Fiction",
+        "publicationYear": 1949,
+        "authorId": "69a2d3d1f6f41d7f577c2908",
+        "ratings": [
+            {
+                "user": "charlie",
+                "score": 5,
+                "comment": "Masterpiece!"
+            },
+            {
+                "user": "diana",
+                "score": 5,
+                "comment": "Must read"
+            },
+            {
+                "user": "john",
+                "score": 5,
+                "comment": "Absolutely brilliant!"
+            }
+        ]
+    },
+    {
+        "_id": "69a2d3faf6f41d7f577c290d",
+        "title": "Foundation",
+        "genre": "Science Fiction",
+        "publicationYear": 2016,
+        "authorId": "69a2d3d1f6f41d7f577c2909",
+        "ratings": [
+            {
+                "user": "eve",
+                "score": 4,
+                "comment": "Great sci-fi"
+            }
+        ]
+    },
+    {
+        "_id": "69a2d3faf6f41d7f577c290e",
+        "title": "The Lord of the Rings",
+        "genre": "Fantasy",
+        "publicationYear": 2001,
+        "authorId": "69a2d3d1f6f41d7f577c290a",
+        "ratings": [
+            {
+                "user": "frank",
+                "score": 5,
+                "comment": "Epic!"
+            },
+            {
+                "user": "grace",
+                "score": 5,
+                "comment": "Best book ever"
+            }
+        ]
+    },
+    {
+        "_id": "69a2d3faf6f41d7f577c290f",
+        "title": "The Hobbit",
+        "genre": "Fantasy",
+        "publicationYear": 2018,
+        "authorId": "69a2d3d1f6f41d7f577c290a",
+        "ratings": [
+            {
+                "user": "henry",
+                "score": 4,
+                "comment": "Wonderful adventure"
+            }
+        ]
+    },
+    {
+        "_id": "69a2d415f6f41d7f577c2914",
+        "title": "Animal Farm",
+        "genre": "Fiction",
+        "publicationYear": 1945,
+        "authorId": "69a2d3d1f6f41d7f577c2908",
+        "ratings": [
+            {
+                "user": "ivan",
+                "score": 4,
+                "comment": "Very insightful"
+            }
+        ]
+    }
+]

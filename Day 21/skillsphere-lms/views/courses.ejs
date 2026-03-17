@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SkillSphere - Courses</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .course-card { border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Available Courses</h1>
+
+  <% if (courses.length === 0) { %>
+    <p>No courses available.</p>
+  <% } else { %>
+    <% courses.forEach(course => { %>
+      <div class="course-card">
+        <h3><%= course.title %></h3>
+        <p>Instructor: <%= course.instructor %></p>
+        <p>Duration: <%= course.duration %></p>
+      </div>
+    <% }) %>
+  <% } %>
+</body>
+</html>

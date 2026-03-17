@@ -1,0 +1,8 @@
+.App.container{padding:20px;max-width:1000px;margin:0 auto}
+.stats-row{display:flex;align-items:center}
+.stats-actions{margin-left:12px}
+.content-row{display:flex;gap:16px;margin-top:18px}
+.panel{flex:1;background:var(--panel);padding:14px;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,0.06)}
+.course-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0}
+.dynamic-area{margin-top:12px}
+
